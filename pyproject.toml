@@ -4,11 +4,13 @@ version = "0.1.0"
 description = "Практическая работа по основам алгоритмизации"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "prompt>=0.4.1",
+]
 
 [project.scripts]
 start = "games_project.VD_games.scripts.VD_main:main"
-VD-games = "games_project.VD_games.scripts.VD_main:main"
+VD-games = "games_project.VD_games.scripts.VD_games:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]

@@ -1,13 +1,18 @@
-.PHONY: install VD-games build package-install
+.PHONY: install VD-games build package-install run game
 
 install:
 	uv sync
 
 VD-games:
-	PYTHONPATH=src python3 -m games_project.VD_games.scripts.VD_main
+	uv run python3 -m games_project.VD_games.scripts.VD_main
+
+game:
+	uv run python3 src/games_project/VD_games/scripts/VD_games.py
+
+run: game
 
 build:
 	uv build
 
 package-install:
-	uv tool install dist/*.whl
+	uv tool install --force dist/*.whl
