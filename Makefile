@@ -1,20 +1,22 @@
-.PHONY: install VD-games build package-install run game
+.PHONY: install lint build package-install even calc gcd
 
 install:
 	uv sync
 
-VD-games:
-	uv run python3 -m games_project.VD_games.scripts.VD_main
+lint:
+	uv run ruff check src/
 
-game:
-	uv run python3 src/games_project/VD_games/scripts/VD_games.py
+even:
+	uv run python3 -m games_project.VD_games.scripts.VD_even
 
-run: game
+calc:
+	uv run python3 -m games_project.VD_games.scripts.VD_calc
+
+gcd:
+	uv run python3 -m games_project.VD_games.scripts.VD_gcd
 
 build:
 	uv build
 
 package-install:
 	uv tool install --force dist/*.whl
-lint:
-	uv run ruff check src/
