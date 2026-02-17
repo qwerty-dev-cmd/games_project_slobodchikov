@@ -1,0 +1,3 @@
+[console_scripts]
+VD-games = games_project.VD_games.scripts.VD_main:main
+start = games_project.VD_games.scripts.VD_main:main

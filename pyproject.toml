@@ -1,0 +1,22 @@
+[project]
+name = "games-project-slobodchikov"
+version = "0.1.0"
+description = "Практическая работа по основам алгоритмизации"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+start = "games_project.VD_games.scripts.VD_main:main"
+VD-games = "games_project.VD_games.scripts.VD_main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["games_project", "games_project.VD_games", "games_project.VD_games.scripts"]
+
+[tool.setuptools.package-data]
+"*" = ["*.py"]

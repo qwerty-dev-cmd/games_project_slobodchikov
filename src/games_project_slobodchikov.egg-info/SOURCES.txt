@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/games_project/VD_games/__init__.py
+src/games_project/VD_games/scripts/VD_games.py
+src/games_project/VD_games/scripts/VD_main.py
+src/games_project/VD_games/scripts/__init__.py
+src/games_project_slobodchikov.egg-info/PKG-INFO
+src/games_project_slobodchikov.egg-info/SOURCES.txt
+src/games_project_slobodchikov.egg-info/dependency_links.txt
+src/games_project_slobodchikov.egg-info/entry_points.txt
+src/games_project_slobodchikov.egg-info/top_level.txt
