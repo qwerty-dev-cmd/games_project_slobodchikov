@@ -11,6 +11,7 @@ dependencies = [
 [project.scripts]
 start = "games_project.VD_games.scripts.VD_main:main"
 VD-games = "games_project.VD_games.scripts.VD_games:main"
+VD-even = "games_project.VD_games.scripts.VD_even:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -22,3 +23,24 @@ packages = ["games_project", "games_project.VD_games", "games_project.VD_games.s
 
 [tool.setuptools.package-data]
 "*" = ["*.py"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.1",
+]
+[tool.ruff]
+# Target Python version
+target-version = "py311"
+
+# Список игнорируемых ошибок
+lint.ignore = [
+    "F401",  # Неиспользуемые импорты (пока игнорируем)
+    "E501",  # Слишком длинные строки
+]
+
+# Выбираем линии длины строки
+line-length = 120
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"scripts/*.py" = ["F401"]
