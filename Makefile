@@ -1,4 +1,4 @@
-.PHONY: install lint build package-install even calc gcd
+.PHONY: install lint build package-install even calc gcd progression prime
 
 install:
 	uv sync
@@ -14,6 +14,12 @@ calc:
 
 gcd:
 	uv run python3 -m games_project.VD_games.scripts.VD_gcd
+
+progression:
+	uv run python3 -m games_project.VD_games.scripts.VD_progression
+
+prime:
+	uv run python3 -m games_project.VD_games.scripts.VD_prime
 
 build:
 	uv build
